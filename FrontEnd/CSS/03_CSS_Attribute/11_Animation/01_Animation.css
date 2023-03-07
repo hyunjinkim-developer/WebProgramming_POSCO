@@ -1,0 +1,116 @@
+/* 
+    transition VS animation
+    transition:
+        - 전환될 "스타일"을 지정
+        - hover, active, onclick(.js) etc.의 event가 존재해야 함
+
+    animation:
+        - 중간 step 지정 가능 -> 세밀한 전환 가능
+        - 정지, 반복, 시작 동작을 개별적으로 지정 가능
+        - @keyframes로 이루어짐
+*/
+
+/*  animation 속성:
+    - animation-name
+    - animation-duration : 한 사이클의 애니메이션이 얼마동안 일어날지 지정
+    - animation-iteration-count : 반복횟수
+    - animation-timing-function : 시간함수
+        linear, ease, ease-in, ease-out, ease-in-out
+    - animation-direction
+        normal : default, 정해진 대로 가는 것.(정방향)
+        reverse : 역방향
+        alternate : 정방향 후 역방향 진행
+        alternate-reverse : 역방향 후 정방향 진행
+  
+        
+    단축 속성 순서:
+    animation : name duration timing-function delay iteration-count direction;
+*/
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    position: relative;
+
+    animation-name: custom-animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    animation-delay: 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes custom-animation{
+0% {
+    left: 0px;
+}
+
+25% {
+    left: 200px;
+}
+
+50% {
+    left: 400px;
+}
+
+75% {
+    left: 200px;
+}
+
+100% {
+    left: 0px;
+}
+}
+
+.bounce-ball1 {
+    position: relative;
+    left: 100px;
+    top: 0;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #000;
+
+    animation-name: ball1;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+@keyframes ball1 {
+    to {
+        top: 0;
+    }
+
+    from {
+        top: 300px;
+    }
+}
+
+.bounce-ball2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: tomato;
+    position: absolute;
+    /* 단축 속성 */
+    animation: ball2 2s linear infinite;
+}
+
+@keyframes ball2 {
+    /* keyframes 안에 함수 지정 가능 */
+    from, to {
+        bottom: 0;
+        animation-timing-function: ease-out;
+    }
+
+    50% {
+        bottom: 300px;
+        animation-timing-function: ease-in;
+    }
+}
+/* viewport기준이므로 화면을 줄여도 화면 하단부에 떨어짐 */
