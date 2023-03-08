@@ -1,1 +1,1 @@
-alert('link 방식');
+alert("link 방식");
