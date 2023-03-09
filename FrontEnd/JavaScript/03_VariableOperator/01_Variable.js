@@ -8,7 +8,7 @@ console.log(name);
 /* let
 Recommended!
 1. Cannot redefine 
-2. when defined, ot initialized is allowed
+2. when defined, no initialized is allowed
 */
 let variable = 1;
 // Reassign allowed
