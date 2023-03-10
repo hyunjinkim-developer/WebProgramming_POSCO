@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start JS!</title>
+    <script>
+      alert("Inside head");
+    </script>
+    <!-- .js를 body보다 먼저 읽기 때문에 빠르게 동작 가능
+        body에 있는 스크립트 들이 나중에 동작하기 때문에 요소가 늦게 보여질 수 있음 -->
+    <!-- 링크 방식 -->
+    <script src="./index.js"></script>
+    <style>
+      body {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <!-- 내장 방식 -->
+  <script>
+    alert("Between head and body");
+  </script>
+
+  <body>
+    <script>
+      /* 요소가 먼저 보이고 기능 동작
+            기능이 늦게 동작할 수 있음 */
+      alert("Inside body");
+    </script>
+  </body>
+
+  <script>
+    alert("Below body");
+  </script>
+</html>
