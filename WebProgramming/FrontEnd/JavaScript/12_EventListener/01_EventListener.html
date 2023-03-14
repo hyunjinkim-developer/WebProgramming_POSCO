@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Event Listener</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+
+      .btn {
+        width: 800px;
+        height: 35px;
+        border-radius: 13px;
+        text-align: center;
+        line-height: 35px;
+        font-weight: 700;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      .btn--black {
+        background-color: rgb(44, 44, 44);
+        color: #fff;
+      }
+
+      .btn--green {
+        background-color: green;
+        color: orange;
+      }
+
+      .btn--blue {
+        background-color: rgba(73, 73, 255, 0.7);
+        color: indigo;
+      }
+
+      .btn--red {
+        background-color: orangered;
+        color: #fff;
+      }
+
+      .pos {
+        width: 300px;
+        height: 300px;
+
+        position: fixed;
+        bottom: 500px;
+        transition: 2s;
+
+        text-align: center;
+        opacity: 0.1;
+      }
+    </style>
+
+    <script defer src="./01_EventListener.js"></script>
+  </head>
+  <body>
+    <div class="btn btn--black">button1</div>
+    <div class="btn btn--green">button2</div>
+    <div class="btn btn--blue">button3</div>
+    <div class="btn btn--red">button4</div>
+
+    <div id="container"></div>
+
+    <div class="btn btn--red pos">Hello!</div>
+
+    <button>click ME!</button>
+    <input type="text" />
+
+    <h2>Todo list</h2>
+    <form id="todo-form">
+      <input type="text" name="todo" />
+      <button>Add</button>
+    </form>
+    <ul class="todos"></ul>
+
+    <hr />
+    <h2>Change input event in realtime</h2>
+    <input type="text" id="change-input" />
+    <div class="intro"></div>
+  </body>
+</html>
