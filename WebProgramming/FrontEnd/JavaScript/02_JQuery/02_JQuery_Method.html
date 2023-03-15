@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JQuery Method</title>
+
+    <!--JQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./02_JQuery_Method.js"></script>
+
+    <style>
+      .color-blue {
+        color: blue;
+      }
+      .fs-50 {
+        font-size: 50px;
+      }
+
+      .bg-green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>jQuery method</h1>
+    <h2>val()</h2>
+    <input type="text" />
+    <b type="button" onclick="getValue();">Get value</b>
+    <button type="button" onclick="setValue();">Set value</button>
+
+    <hr />
+    <h2>css()</h2>
+    <span>Hello!</span>
+    <br />
+    <button type="button" onclick="changeCssJS();">Change CSS with JS</button>
+    <button type="button" onclick="changeCssJquery();">
+      Change CSS with JQuery
+    </button>
+
+    <hr />
+    <h2>attr()</h2>
+    <a href="https://www.google.com">Google</a>
+    <button type="button" onclick="changeAttrJS();">
+      Change attribute with JS
+    </button>
+    <button type="button" onclick="changeAttrJquery();">
+      Change attribute with JQuery
+    </button>
+
+    <hr />
+    <h2>text()</h2>
+    <p class="p-text">Hello World!</p>
+    <button type="button" onclick="changeTextJS();">Change text with JS</button>
+    <button type="button" onclick="changeTextJquery();">
+      Change text with JQuery
+    </button>
+
+    <hr />
+    <h2>html()</h2>
+    <p class="p-html">Hello World!</p>
+    <button type="button" onclick="changeHtmlJS();">Change html with JS</button>
+    <button type="button" onclick="changeHtmlJquery();">
+      Change html with JQuery
+    </button>
+
+    <hr />
+    <h2>Add elements</h2>
+    <ul class="colors">
+      <li class="orange">orange</li>
+      <li class="green">green</li>
+      <li class="navy">navy</li>
+    </ul>
+
+    <h3>append(): Add as last child of selected element</h3>
+    <button type="button" onclick="appendJS();">append() with JS</button>
+    <button type="button" onclick="appendJquery();">
+      append() with JQuery
+    </button>
+
+    <h3>prepend(): Add as the first child of selected element</h3>
+    <button type="button" onclick="prependJS();">prepend() with JS</button>
+    <button type="button" onclick="prependJquery();">
+      prepend() with JQuery
+    </button>
+    <h3>after(): Add a sibiling after selected element</h3>
+    <button type="button" onclick="afterJS();">after() with JS</button>
+    <button type="button" onclick="afterJquery();">after() with JQuery</button>
+    <h3>before(): Add a sibiling before selected element</h3>
+    <button type="button" onclick="beforeJS();">before() with JS</button>
+    <button type="button" onclick="beforeJquery();">
+      before() with JQuery
+    </button>
+
+    <hr />
+    <h2>Remove / empty elements</h2>
+    <ul class="nums">
+      <li>1</li>
+      <li id="li2">2</li>
+      <li>3</li>
+    </ul>
+
+    <hr />
+    <h3>remove()</h3>
+    <button type="button" onclick="removeJS();">remove() with JS</button>
+    <button type="button" onclick="removeJquery();">
+      remove() with JQuery
+    </button>
+
+    <hr />
+    <h3>empty()</h3>
+    <button type="button" onclick="emptyJS();">empty() with JS</button>
+    <button type="button" onclick="emptyJquery();">empty() with JQuery</button>
+
+    <hr />
+    <h2>Find Elements</h2>
+    <div class="ancestor">
+      <div class="parent">
+        <div class="child1">Child1</div>
+        <div class="child2">Child2</div>
+        <div class="child3">Child3</div>
+      </div>
+    </div>
+
+    <button type="button" onclick="findParent();">Find parent</button>
+    <button type="button" onclick="findParents();">Find ancestors</button>
+    <button type="button" onclick="findNext();">Find next sibiling</button>
+    <button type="button" onclick="findPrev();">Find previous sibiling</button>
+    <button type="button" onclick="findChildren();">Find all children</button>
+
+    <hr />
+    <h2>Adjust classes</h2>
+    <p id="hi" class="color-blue">Hi!</p>
+    <button type="button" onclick="addClass();">Add a class</button>
+    <button type="button" onclick="removeClass();">Remove a class</button>
+    <button type="button" onclick="hasClass();">
+      Check if the class exists
+    </button>
+    <button type="button" onclick="toggleClass();">Toggle class</button>
+  </body>
+</html>
